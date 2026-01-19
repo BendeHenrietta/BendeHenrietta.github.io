@@ -483,7 +483,6 @@ id,airline,flight,source_city,departure_time,stops,arrival_time,destination_city
 481,Air_India,AI-475,Delhi,Afternoon,one,Afternoon,Mumbai,Economy,24.58,4,9988
 482,Vistara,UK-637,Delhi,Evening,one,Night,Mumbai,Economy,4.42,4,10575
 483,Vistara,UK-879,Delhi,Evening,one,Night,Mumbai,Economy,5.33,4,10575
-484,Vistara,UK-706,Delhi,Afternoon,one,Night,Mumbai,Economy,7.92,4,10575
 485,Vistara,UK-879,Delhi,Evening,one,Morning,Mumbai,Economy,16.33,4,10575
 486,Vistara,UK-879,Delhi,Evening,one,Afternoon,Mumbai,Economy,20.83,4,10575
 487,Air_India,AI-531,Delhi,Evening,one,Night,Mumbai,Economy,24.75,4,10260
@@ -1962,7 +1961,6 @@ id,airline,flight,source_city,departure_time,stops,arrival_time,destination_city
 29257,Vistara,UK-953,Delhi,Night,one,Early_Morning,Hyderabad,Economy,11.17,6,9840
 29258,Vistara,UK-927,Delhi,Morning,one,Night,Hyderabad,Economy,11.42,6,9840
 29259,Vistara,UK-985,Delhi,Evening,one,Early_Morning,Hyderabad,Economy,12.0,6,9840
-29260,Vistara,UK-963,Delhi,Morning,one,Night,Hyderabad,Economy,12.08,6,9840
 29261,Vistara,UK-977,Delhi,Evening,one,Early_Morning,Hyderabad,Economy,12.83,6,9840
 29262,Vistara,UK-943,Delhi,Early_Morning,one,Night,Hyderabad,Economy,13.42,6,9840
 29263,Vistara,UK-955,Delhi,Evening,one,Early_Morning,Hyderabad,Economy,14.08,6,9840
@@ -2089,7 +2087,6 @@ id,airline,flight,source_city,departure_time,stops,arrival_time,destination_city
 35444,Indigo,6E-2336,Delhi,Early_Morning,one,Afternoon,Chennai,Economy,9.75,2,7950
 35445,Indigo,6E-2147,Delhi,Night,one,Early_Morning,Chennai,Economy,10.5,2,7950
 35446,Indigo,6E-2026,Delhi,Morning,one,Evening,Chennai,Economy,10.92,2,7950
-35447,Indigo,6E-358,Delhi,Morning,one,Night,Chennai,Economy,11.83,2,7950
 35448,Air_India,AI-537,Delhi,Evening,zero,Evening,Chennai,Economy,2.75,2,8265
 35449,Indigo,6E-967,Delhi,Evening,one,Late_Night,Chennai,Economy,6.67,2,8596
 35450,Indigo,6E-6205,Delhi,Afternoon,one,Night,Chennai,Economy,7.17,2,8596
@@ -2146,7 +2143,6 @@ id,airline,flight,source_city,departure_time,stops,arrival_time,destination_city
 35501,Air_India,AI-764,Delhi,Evening,two_or_more,Morning,Chennai,Economy,18.08,2,18493
 35502,Vistara,UK-817,Delhi,Evening,two_or_more,Evening,Chennai,Economy,27.83,2,19177
 35503,Vistara,UK-819,Delhi,Afternoon,two_or_more,Evening,Chennai,Economy,29.67,2,19597
-35504,Vistara,UK-801,Delhi,Morning,two_or_more,Evening,Chennai,Economy,34.83,2,19597
 35505,Vistara,UK-809,Delhi,Evening,two_or_more,Morning,Chennai,Economy,16.0,2,22230
 35506,Vistara,UK-813,Delhi,Evening,two_or_more,Morning,Chennai,Economy,18.25,2,22230
 35507,SpiceJet,SG-8171,Delhi,Morning,one,Evening,Chennai,Economy,6.42,2,22125
@@ -2234,7 +2230,6 @@ id,airline,flight,source_city,departure_time,stops,arrival_time,destination_city
 35589,Vistara,UK-801,Delhi,Morning,two_or_more,Morning,Chennai,Economy,26.75,3,19597
 35590,Vistara,UK-801,Delhi,Morning,two_or_more,Evening,Chennai,Economy,34.83,3,19597
 35591,Vistara,UK-951,Delhi,Afternoon,one,Evening,Chennai,Economy,5.58,3,19920
-35592,Vistara,UK-951,Delhi,Afternoon,one,Morning,Chennai,Economy,21.5,3,19920
 35593,Vistara,UK-809,Delhi,Evening,two_or_more,Morning,Chennai,Economy,16.0,3,20647
 35594,Vistara,UK-809,Delhi,Evening,two_or_more,Evening,Chennai,Economy,24.08,3,20647
 35595,Vistara,UK-813,Delhi,Evening,two_or_more,Morning,Chennai,Economy,18.25,3,22327
@@ -2285,7 +2280,6 @@ id,airline,flight,source_city,departure_time,stops,arrival_time,destination_city
 35640,Indigo,6E-967,Delhi,Evening,one,Late_Night,Chennai,Economy,6.67,4,7950
 35641,Indigo,6E-2188,Delhi,Afternoon,one,Evening,Chennai,Economy,6.75,4,7950
 35642,Indigo,6E-6205,Delhi,Afternoon,one,Night,Chennai,Economy,7.17,4,7950
-35643,Indigo,6E-397,Delhi,Afternoon,one,Evening,Chennai,Economy,7.42,4,7950
 35644,Indigo,6E-2331,Delhi,Early_Morning,one,Afternoon,Chennai,Economy,8.33,4,7950
 35645,Indigo,6E-2247,Delhi,Morning,one,Night,Chennai,Economy,9.08,4,7950
 35646,Indigo,6E-6205,Delhi,Afternoon,one,Night,Chennai,Economy,9.17,4,7950
@@ -2628,7 +2622,6 @@ id,airline,flight,source_city,departure_time,stops,arrival_time,destination_city
 44682,Air_India,AI-637,Mumbai,Evening,one,Night,Delhi,Economy,26.42,11,8988
 44683,Vistara,UK-877,Mumbai,Morning,one,Evening,Delhi,Economy,9.17,11,9828
 44684,Vistara,UK-877,Mumbai,Morning,one,Night,Delhi,Economy,12.08,11,9828
-44685,Vistara,UK-873,Mumbai,Early_Morning,one,Evening,Delhi,Economy,13.58,11,9828
 44686,Vistara,UK-873,Mumbai,Early_Morning,one,Night,Delhi,Economy,16.5,11,9828
 44687,Vistara,UK-875,Mumbai,Evening,one,Afternoon,Delhi,Economy,17.33,11,9828
 44688,Vistara,UK-875,Mumbai,Evening,one,Afternoon,Delhi,Economy,20.33,11,9828

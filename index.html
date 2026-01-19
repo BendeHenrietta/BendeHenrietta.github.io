@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Interaktív adatvizualizációs dashboard indiai repülőjegy árak elemzésére">
-    <title>Flight Analytics Dashboard | India Aviation Data 2024</title>
+    <title>Flight Analytics Dashboard | Dark Glass</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
@@ -21,40 +22,42 @@
         
         <header>
             <div class="logo-section">
-                <div class="plane-icon">✈️</div>
+                <div class="plane-icon"><i class="ri-plane-fill"></i></div>
                 <div>
-                    <h1>Flight Analytics Dashboard</h1>
+                    <h1>Flight Analytics</h1>
                     <p class="subtitle">Comprehensive Analysis of Indian Domestic Flight Pricing</p>
+
                 </div>
             </div>
             <div class="last-update">
-                <span id="data-count">0</span> flights analyzed
+                <i class="ri-database-2-line"></i> <span id="data-count">0</span> flights analyzed
             </div>
         </header>
 
         <div class="stats-row">
             <div class="stat-card">
-                <div class="stat-icon">🛫</div>
+                <div class="stat-icon"><i class="ri-flight-takeoff-line"></i></div>
                 <div class="stat-info">
                     <h3>Total Flights</h3>
                     <p id="stat-total">0</p>
                 </div>
             </div>
             <div class="stat-card">
-                <div class="stat-icon">💰</div>
+                <div class="stat-icon"><i class="ri-money-dollar-circle-line"></i></div>
                 <div class="stat-info">
                     <h3>Average Price</h3>
-                    <p id="stat-avg">₹0</p> </div>
+                    <p id="stat-avg">₹0</p>
+                </div>
             </div>
             <div class="stat-card success">
-                <div class="stat-icon">📉</div>
+                <div class="stat-icon"><i class="ri-arrow-down-circle-line"></i></div>
                 <div class="stat-info">
                     <h3>Minimum Price</h3>
                     <p id="stat-min">₹0</p>
                 </div>
             </div>
             <div class="stat-card warning">
-                <div class="stat-icon">📈</div>
+                <div class="stat-icon"><i class="ri-arrow-up-circle-line"></i></div>
                 <div class="stat-info">
                     <h3>Maximum Price</h3>
                     <p id="stat-max">₹0</p>
@@ -64,8 +67,10 @@
 
         <div class="filters-panel glass-panel">
             <div class="filter-header">
-                <h3>🔍 Interactive Filters</h3>
-                <button onclick="resetFilters()" class="reset-btn">Reset All</button>
+                <h3><i class="ri-equalizer-line"></i> Interactive Filters</h3>
+                <button onclick="resetFilters()" class="reset-btn">
+                    <i class="ri-refresh-line"></i> Reset All
+                </button>
             </div>
             <div class="filters-grid">
                 <div class="filter-group">
@@ -87,25 +92,25 @@
                     </select>
                 </div>
                 <div class="filter-group">
-                    <label>Days Before Departure (Max: <span id="days-val">50</span>)</label>
+                    <label>Days Before Departure: <span id="days-val">50</span></label>
                     <input type="range" id="filter-days" min="1" max="50" value="50" oninput="updateDashboard()">
                 </div>
             </div>
         </div>
 
         <div class="insights-panel glass-panel">
-            <h3>📊 Key Insights</h3>
+            <h3><i class="ri-flashlight-line"></i> Key Insights</h3>
             <ul id="insights-list">
-                <li>Adatok betöltése folyamatban...</li>
+                <li><i class="ri-loader-4-line spin"></i> Loading data...</li>
             </ul>
         </div>
 
         <div class="charts-grid">
             
-            <div class="chart-card glass-panel span-2">
+            <div class="chart-card glass-panel">
                 <div class="card-header">
                     <div>
-                        <h3>📅 Optimal Booking Window</h3>
+                        <h3><i class="ri-calendar-event-line"></i> Optimal Booking Window</h3>
                         <p class="chart-description">How booking lead time affects ticket prices</p>
                     </div>
                     <span class="info-badge">Scatter Plot</span>
@@ -116,10 +121,10 @@
             <div class="chart-card glass-panel">
                 <div class="card-header">
                     <div>
-                        <h3>🏆 Airline Price Comparison</h3>
+                        <h3><i class="ri-bar-chart-grouped-line"></i> Airline Price Comparison</h3>
                         <p class="chart-description">Average prices by carrier</p>
                     </div>
-                    <span class="info-badge">Bar Chart</span>
+                    <span class="info-badge">Comparison</span>
                 </div>
                 <div id="viz-airline" class="viz-container"></div>
             </div>
@@ -127,18 +132,18 @@
             <div class="chart-card glass-panel">
                 <div class="card-header">
                     <div>
-                        <h3>🛑 Direct vs Connecting Flights</h3>
+                        <h3><i class="ri-git-merge-line"></i> Direct vs Connecting Flights</h3>
                         <p class="chart-description">Price distribution by stops</p>
                     </div>
-                    <span class="info-badge">Box Plot</span>
+                    <span class="info-badge">Distribution</span>
                 </div>
                 <div id="viz-stops" class="viz-container"></div>
             </div>
 
-            <div class="chart-card glass-panel span-2">
+            <div class="chart-card glass-panel">
                 <div class="card-header">
                     <div>
-                        <h3>🗺️ Route × Airline Pricing Matrix</h3>
+                        <h3><i class="ri-grid-line"></i> Route Pricing Matrix</h3>
                         <p class="chart-description">Average prices across routes and carriers</p>
                     </div>
                     <span class="info-badge">Heatmap</span>
@@ -149,10 +154,10 @@
             <div class="chart-card glass-panel">
                 <div class="card-header">
                     <div>
-                        <h3>⏰ Time of Day Pricing</h3>
+                        <h3><i class="ri-time-line"></i> Time of Day Pricing</h3>
                         <p class="chart-description">Price trends by departure time</p>
                     </div>
-                    <span class="info-badge">Line Chart</span>
+                    <span class="info-badge">Timeline</span>
                 </div>
                 <div id="viz-time" class="viz-container"></div>
             </div>
@@ -160,8 +165,8 @@
             <div class="chart-card glass-panel">
                 <div class="card-header">
                     <div>
-                        <h3>⏱️ Duration Impact</h3>
-                        <p class="chart-description">Flight duration vs pricing</p>
+                        <h3><i class="ri-timer-flash-line"></i> Duration Impact</h3>
+                        <p class="chart-description">Flight duration vs pricing correlation</p>
                     </div>
                     <span class="info-badge">Correlation</span>
                 </div>
@@ -173,16 +178,16 @@
         <footer class="footer">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>📋 About This Project</h4>
-                    <p>This interactive dashboard analyzes <strong>300,000+ flight records</strong> from Indian domestic airlines to uncover pricing patterns and booking insights.</p>
+                    <h4><i class="ri-file-list-3-line"></i> About This Project</h4>
+                    <p>This interactive dashboard analyzes flight records from Indian domestic airlines to uncover pricing patterns and booking insights.</p>
                 </div>
                 <div class="footer-section">
-                    <h4>🛠️ Technologies Used</h4>
-                    <p>Vega-Lite • PapaParse • HTML5/CSS3 • JavaScript ES6</p>
+                    <h4><i class="ri-tools-line"></i> Technologies Used</h4>
+                    <p>Vega-Lite •  HTML5/CSS3 • JavaScript ES6</p>
                 </div>
                 <div class="footer-section">
-                    <h4>📊 Data Source</h4>
-                    <p>Indian Aviation Dataset (2022) - airline_new.csv</p>
+                    <h4><i class="ri-database-2-line"></i> Data Source</h4>
+                    <p>Indian Aviation Dataset (2022)</p>
                 </div>
             </div>
         </footer>
@@ -192,8 +197,8 @@
     <div id="loader" class="loader-overlay">
         <div class="upload-container">
             <div class="spinner"></div>
-            <h2>Rendszer indítása...</h2>
-            <p>Adatok keresése és betöltése...</p>
+            <h2>System Initializing...</h2>
+            <p>Loading and processing data...</p>
         </div>
     </div>
 

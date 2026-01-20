@@ -1,4 +1,4 @@
-const CSV_FILE_PATH = 'airline.csv'; 
+const CSV_FILE_PATH = 'delhi.csv'; 
 const EUR_RATE = 0.0095; 
 
 let rawData = [];
